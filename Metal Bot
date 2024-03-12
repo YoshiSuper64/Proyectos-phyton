@@ -1,5 +1,8 @@
+import random
+from traceback import FrameSummary
 import discord
 from discord.ext import commands
+import _random
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -19,7 +22,25 @@ async def adios(ctx):
     await ctx.send(f'Adios, Amigo {bot.user}!')
 
 @bot.command()
+async def ayuda(ctx):
+    frases = ["Puedes ir a limpiar una playa", "Puedes ir a limpiar un parque", "Puedes barrer tu calle"]
+    frase = random.choice(frases)
+
+@bot.command()
+async def tiempo(ctx):
+    await ctx.send(f'Aqui son las 11:00 pm que hora es alla?')
+
+@bot.command()
+async def comoestas(ctx)
+    await ctx.send(f'bien, gracias por preguntar {bot.user}')
+
+@bot.command()
 async def heh(ctx, count_heh = 5):
     await ctx.send("he" * count_heh)
+    
+@bot.command()
+async def tips(ctx)
+    tips = ("recicla", "separa la basura correctamente", "recoge el agua de la regadera en vez de desperdiciarla te puede servir despues")
+    tip = random.choice(tips)
 
-bot.run("MTIxMjE0MzY1NzY4ODM3NTM1Nw.G_aiMF.qa-J4ulwf5EwijTd884-AcpODiPHdhkuPxNnPg")
+bot.run
